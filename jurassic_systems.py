@@ -8,6 +8,7 @@ login_successful = False
 
 print("Welcome to Jurassic Park!")
 
+# ask user for the correct password
 while login_attempts < max_attempts:
   attemped_password = input("Password: ")
   if attemped_password != password:
@@ -17,16 +18,19 @@ while login_attempts < max_attempts:
     login_successful = True
     break
 
+# the user did not supply the correct password
 if login_successful == False:
   while True:
     print("Uh uh uh! Didn't say the magic word!")
     sleep(1)
-  
+# correct password given
 else:
   print("Login successful! Welcome to your UNIX system.")
   nix_command = ""
+
   while True:
     nix_command = input("> ")
+
     if nix_command != "exit":
       os.system(nix_command)
     else:

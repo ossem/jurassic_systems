@@ -2,12 +2,13 @@ from time import sleep
 import os
 
 login_attempts = 0
+max_attempts = 3
 password = "Please"
 login_successful = False
 
 print("Welcome to Jurassic Park!")
 
-while login_attempts < 3:
+while login_attempts < max_attempts:
   attemped_password = input("Password: ")
   if attemped_password != password:
     print("Incorrect password.")
